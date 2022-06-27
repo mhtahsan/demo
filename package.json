@@ -1,0 +1,33 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "nothing",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder build --win --publish never",
+    "deploy": "electron-builder build --win --publish always"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mhtahsan/demo.git"
+  },
+  "build":{
+    "win":{
+      "publish":{
+        "provider": "github",
+        "repo": "demo",
+        "owner": "mhtahsan"
+      }
+    }
+  },
+  "author": "tahsan",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^19.0.6",
+    "electron-builder": "^23.1.0"
+  },
+  "dependencies": {
+    "electron-updater": "^5.0.5"
+  }
+}
